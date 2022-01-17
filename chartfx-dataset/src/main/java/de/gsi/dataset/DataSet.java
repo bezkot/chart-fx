@@ -3,9 +3,10 @@ package de.gsi.dataset;
 import java.io.Serializable;
 import java.util.List;
 
+import javafx.beans.property.BooleanProperty;
+
 import de.gsi.dataset.event.EventSource;
 import de.gsi.dataset.locks.DataSetLock;
-import javafx.beans.property.BooleanProperty;
 
 /**
  * Basic interface for observable data sets.
@@ -163,5 +164,4 @@ public interface DataSet extends EventSource, Serializable {
     }
 
     BooleanProperty visibleProperty();
-
 }

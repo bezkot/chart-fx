@@ -1,20 +1,21 @@
 package de.gsi.dataset.spi;
 
+import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.atomic.AtomicBoolean;
+import java.util.function.IntToDoubleFunction;
+
+import javafx.beans.property.BooleanProperty;
+import javafx.beans.property.SimpleBooleanProperty;
+
 import de.gsi.dataset.*;
-import de.gsi.dataset.event.EventListener;
 import de.gsi.dataset.event.*;
+import de.gsi.dataset.event.EventListener;
 import de.gsi.dataset.locks.DataSetLock;
 import de.gsi.dataset.locks.DefaultDataSetLock;
 import de.gsi.dataset.spi.utils.MathUtils;
 import de.gsi.dataset.spi.utils.StringHashMapList;
 import de.gsi.dataset.utils.AssertUtils;
-import javafx.beans.property.BooleanProperty;
-import javafx.beans.property.SimpleBooleanProperty;
-
-import java.util.*;
-import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.atomic.AtomicBoolean;
-import java.util.function.IntToDoubleFunction;
 
 /**
  * <p>

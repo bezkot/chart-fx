@@ -108,7 +108,7 @@ public class DefaultLegend extends FlowPane implements Legend {
     public LegendItem getNewLegendItem(final Renderer renderer, final DataSet series, final int seriesIndex) {
         final Canvas symbol = renderer.drawLegendSymbol(series, seriesIndex, SYMBOL_WIDTH, SYMBOL_HEIGHT);
         var item = new LegendItem(series.getName(), symbol);
-        item.setOnMouseClicked(event-> series.setVisible(!series.isVisible()));
+        item.setOnMouseClicked(event -> series.setVisible(!series.isVisible()));
         item.pseudoClassStateChanged(disabledClass, !series.isVisible());
         series.visibleProperty().addListener((obs, old, newValue) -> item.pseudoClassStateChanged(disabledClass, !newValue));
         return item;
